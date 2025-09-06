@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailor E-commerce</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/products.css">
+</head>
+<body>
+    <!-- start products section  -->
+    <section class="products-section d-flex gap-2">
+        <div class="filter-box p-3">
+            <h3>Filter <i class="fa-solid fa-filter"></i></h3>
+            <form class="category-filter d-flex flex-column gap-4 my-4">
+                <div class="form-check p-0 d-flex align-items-center gap-2">
+                    <input id="top" type="checkbox" name="category" value="tops">
+                    <label for="top">Top</label>
+                </div>
+                <div class="form-check p-0 d-flex align-items-center gap-2">
+                    <input id="bottom" type="checkbox" name="category" value="bottoms">
+                    <label for="bottom">Bottom</label>
+                </div>
+                <div class="form-check p-0 d-flex align-items-center gap-2">
+                    <input id="suits" type="checkbox" name="category" value="suits">
+                    <label for="suits">Suits</label>
+                </div>
+                <div class="form-check p-0 d-flex align-items-center gap-2">
+                    <input id="wedding" type="checkbox" name="category" value="wedding">
+                    <label for="wedding">Wedding</label>
+                </div>
+                <button type="button" class="btn btn-secondary clear-filter">Clear Filter</button>
+            </form>
+        </div>
+        <div class="products-box p-3">
+            <div class="container">
+                <div class="row">
+                    <!-- products will be added here -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end products section  -->
+    
+    <script src="./js/products.js" type="module"></script>
+</body>
+</html>
