@@ -1,532 +1,664 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css.map">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <!-- Font awesome -->
+    <link href="./css/all.min.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <!-- start navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="imgs/logo.png" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo.png" class="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Trips
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Trips
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#" aria-disabled="true">Desitination</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#" aria-disabled="true">Contact us</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                <button class="btn" type="submit">Search</button>
-                <button class="btn mx-3" type="submit">Login</button>
-            </form>
-            </div>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" aria-disabled="true">Desitination</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" aria-disabled="true">Contact us</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn" type="submit">Search</button>
+            <button class="btn mx-3" type="submit">Login</button>
+          </form>
         </div>
+      </div>
     </nav>
     <!-- end navbar -->
 
     <!-- start swiper -->
     <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/slider5.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>NEW YORK</h3>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img src="imgs/slider5.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h3>NEW YORK</h3>
-                <p>Some representative placeholder content for the first slide.</p>
-            </div>
-            </div>
-            <div class="carousel-item">
-            <img src="imgs/slider6.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h3>BANGKOK</h3>
-                <p>Some representative placeholder content for the second slide.</p>
-            </div>
-            </div>
-            <div class="carousel-item">
-            <img src="imgs/slider7.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h3>PYRAMIDS</h3>
-                <p>Some representative placeholder content for the third slide.</p>
-            </div>
-            </div>
+        <div class="carousel-item">
+          <img src="./images/slider6.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>BANGKOK</h3>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        <div class="carousel-item">
+          <img src="./images/slider7.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>PYRAMIDS</h3>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
     <!-- end swiper -->
 
     <!-- start social media icons -->
     <div class="social-media-icons">
-        <i class="fa-brands fa-facebook mb-2 text-primary"></i>
-        <i class="fa-brands fa-instagram mb-2 text-danger"></i>
-        <i class="fa-brands fa-whatsapp mb-2 text-success"></i>
-        <i class="fa-brands fa-twitter mb-2 text-info"></i>
-        <i class="fa-brands fa-youtube mb-2 text-danger"></i>
+      <i class="fa-brands fa-facebook mb-2 text-primary"></i>
+      <i class="fa-brands fa-instagram mb-2 text-danger"></i>
+      <i class="fa-brands fa-whatsapp mb-2 text-success"></i>
+      <i class="fa-brands fa-twitter mb-2 text-info"></i>
+      <i class="fa-brands fa-youtube mb-2 text-danger"></i>
     </div>
     <!-- end social media icons -->
 
     <!-- start accorion -->
     <div class="container">
-         <div class="accordion py-5" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Cairo
-                </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-                </div>
+      <div class="accordion py-5" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Cairo
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the first item’s accordion body.</strong> It is
+              shown by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It’s also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Bangkok
-                </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    New York
-                </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Bangkok
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the second item’s accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It’s also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              New York
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the third item’s accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It’s also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- end accorion -->
 
     <!-- start destination -->
     <section class="destination">
-        <h2 class="main-title text-center mb-5">Popular Desitination in Egypt</h2>
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <img src="imgs/g1.png" class="img-fluid" alt="">
-                        <div class="text-box">
-                            <h4>Cairo</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veritatis, ipsam facere voluptas officiis autem, maiores asperiores earum accusamus excepturi dolorem aut delectus a unde quas ducimus sit, eligendi necessitatibus.
-                            </p>
-                            <button class="btn rounded">Explore
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <img src="imgs/g4.png" class="img-fluid" alt="">
-                        <div class="text-box">
-                            <h4>Paris</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veritatis, ipsam facere voluptas officiis autem, maiores asperiores earum accusamus excepturi dolorem aut delectus a unde quas ducimus sit, eligendi necessitatibus.
-                            </p>
-                            <button class="btn rounded">Explore
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <img src="imgs/g3.png" class="img-fluid" alt="">
-                        <div class="text-box">
-                            <h4>New York</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veritatis, ipsam facere voluptas officiis autem, maiores asperiores earum accusamus excepturi dolorem aut delectus a unde quas ducimus sit, eligendi necessitatibus.
-                            </p>
-                            <button class="btn rounded">Explore
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <img src="imgs/uk.png" class="img-fluid" alt="">
-                        <div class="text-box">
-                            <h4>Russia</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veritatis, ipsam facere voluptas officiis autem, maiores asperiores earum accusamus excepturi dolorem aut delectus a unde quas ducimus sit, eligendi necessitatibus.
-                            </p>
-                            <button class="btn rounded">Explore
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <img src="imgs/india.png" class="img-fluid" alt="">
-                        <div class="text-box">
-                            <h4>India</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veritatis, ipsam facere voluptas officiis autem, maiores asperiores earum accusamus excepturi dolorem aut delectus a unde quas ducimus sit, eligendi necessitatibus.
-                            </p>
-                            <button class="btn rounded">Explore
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <img src="imgs/us.png" class="img-fluid" alt="">
-                        <div class="text-box">
-                            <h4>Calefornia</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veritatis, ipsam facere voluptas officiis autem, maiores asperiores earum accusamus excepturi dolorem aut delectus a unde quas ducimus sit, eligendi necessitatibus.
-                            </p>
-                            <button class="btn rounded">Explore
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <img src="imgs/package-2.jpg" class="img-fluid" alt="">
-                        <div class="text-box">
-                            <h4>Tailand</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veritatis, ipsam facere voluptas officiis autem, maiores asperiores earum accusamus excepturi dolorem aut delectus a unde quas ducimus sit, eligendi necessitatibus.
-                            </p>
-                            <button class="btn rounded">Explore
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <img src="imgs/package-1.jpg" class="img-fluid" alt="">
-                        <div class="text-box">
-                            <h4>Maldives</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veritatis, ipsam facere voluptas officiis autem, maiores asperiores earum accusamus excepturi dolorem aut delectus a unde quas ducimus sit, eligendi necessitatibus.
-                            </p>
-                            <button class="btn rounded">Explore
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                        <img src="imgs/g6.png" class="img-fluid" alt="">
-                        <div class="text-box">
-                            <h4>Moscow</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veritatis, ipsam facere voluptas officiis autem, maiores asperiores earum accusamus excepturi dolorem aut delectus a unde quas ducimus sit, eligendi necessitatibus.
-                            </p>
-                            <button class="btn rounded">Explore
-                            </button>
-                        </div>
-                    </div>
-                </div>
+      <h2 class="main-title text-center mb-5">Popular Desitination in Egypt</h2>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <img src="./images/g1.png" class="img-fluid" alt="" />
+              <div class="text-box">
+                <h4>Cairo</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati veritatis, ipsam facere voluptas officiis autem,
+                  maiores asperiores earum accusamus excepturi dolorem aut
+                  delectus a unde quas ducimus sit, eligendi necessitatibus.
+                </p>
+                <button class="btn rounded">Explore</button>
+              </div>
             </div>
-            
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <img src="./images/g4.png" class="img-fluid" alt="" />
+              <div class="text-box">
+                <h4>Paris</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati veritatis, ipsam facere voluptas officiis autem,
+                  maiores asperiores earum accusamus excepturi dolorem aut
+                  delectus a unde quas ducimus sit, eligendi necessitatibus.
+                </p>
+                <button class="btn rounded">Explore</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <img src="./images/g3.png" class="img-fluid" alt="" />
+              <div class="text-box">
+                <h4>New York</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati veritatis, ipsam facere voluptas officiis autem,
+                  maiores asperiores earum accusamus excepturi dolorem aut
+                  delectus a unde quas ducimus sit, eligendi necessitatibus.
+                </p>
+                <button class="btn rounded">Explore</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <img src="./images/uk.png" class="img-fluid" alt="" />
+              <div class="text-box">
+                <h4>Russia</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati veritatis, ipsam facere voluptas officiis autem,
+                  maiores asperiores earum accusamus excepturi dolorem aut
+                  delectus a unde quas ducimus sit, eligendi necessitatibus.
+                </p>
+                <button class="btn rounded">Explore</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <img src="./images/india.png" class="img-fluid" alt="" />
+              <div class="text-box">
+                <h4>India</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati veritatis, ipsam facere voluptas officiis autem,
+                  maiores asperiores earum accusamus excepturi dolorem aut
+                  delectus a unde quas ducimus sit, eligendi necessitatibus.
+                </p>
+                <button class="btn rounded">Explore</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <img src="./images/us.png" class="img-fluid" alt="" />
+              <div class="text-box">
+                <h4>Calefornia</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati veritatis, ipsam facere voluptas officiis autem,
+                  maiores asperiores earum accusamus excepturi dolorem aut
+                  delectus a unde quas ducimus sit, eligendi necessitatibus.
+                </p>
+                <button class="btn rounded">Explore</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <img src="./images/package-2.jpg" class="img-fluid" alt="" />
+              <div class="text-box">
+                <h4>Tailand</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati veritatis, ipsam facere voluptas officiis autem,
+                  maiores asperiores earum accusamus excepturi dolorem aut
+                  delectus a unde quas ducimus sit, eligendi necessitatibus.
+                </p>
+                <button class="btn rounded">Explore</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <img src="./images/package-1.jpg" class="img-fluid" alt="" />
+              <div class="text-box">
+                <h4>Maldives</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati veritatis, ipsam facere voluptas officiis autem,
+                  maiores asperiores earum accusamus excepturi dolorem aut
+                  delectus a unde quas ducimus sit, eligendi necessitatibus.
+                </p>
+                <button class="btn rounded">Explore</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <img src="./images/g6.png" class="img-fluid" alt="" />
+              <div class="text-box">
+                <h4>Moscow</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Obcaecati veritatis, ipsam facere voluptas officiis autem,
+                  maiores asperiores earum accusamus excepturi dolorem aut
+                  delectus a unde quas ducimus sit, eligendi necessitatibus.
+                </p>
+                <button class="btn rounded">Explore</button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- end destination -->
 
     <!-- start thanks for -->
     <section class="thanks">
-        <h2 class="main-title text-center mb-5">Thanks for</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="wrapper">
-                        <div class="overlay">
-                            <div class="thanks-text">
-                                <h4>All Thanks For</h4>
-                                <h6>End/ Ahmed</h6>
-                                <span>Director of UI/UK</span>
-                            </div>
-                        </div>
-                        <img src="imgs/team_1.jpg" class="img-fluid">
-                    </div>
+      <h2 class="main-title text-center mb-5">Thanks for</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="wrapper">
+              <div class="overlay">
+                <div class="thanks-text">
+                  <h4>All Thanks For</h4>
+                  <h6>End/ Ahmed</h6>
+                  <span>Director of UI/UK</span>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="wrapper">
-                        <div class="overlay">
-                            <div class="thanks-text">
-                                <h4>All Thanks For</h4>
-                                <h6>End/ Ahmed</h6>
-                                <span>Director of UI/UK</span>
-                            </div>
-                        </div>
-                        <img src="imgs/team_2.jpg" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="wrapper">
-                        <div class="overlay">
-                            <div class="thanks-text">
-                                <h4>All Thanks For</h4>
-                                <h6>End/ Ahmed</h6>
-                                <span>Director of UI/UK</span>
-                            </div>
-                        </div>
-                        <img src="imgs/team_3.jpg" class="img-fluid">
-                    </div>
-                </div>
+              </div>
+              <img src="./images/team_1.jpg" class="img-fluid" />
             </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="wrapper">
+              <div class="overlay">
+                <div class="thanks-text">
+                  <h4>All Thanks For</h4>
+                  <h6>End/ Ahmed</h6>
+                  <span>Director of UI/UK</span>
+                </div>
+              </div>
+              <img src="./images/team_2.jpg" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="wrapper">
+              <div class="overlay">
+                <div class="thanks-text">
+                  <h4>All Thanks For</h4>
+                  <h6>End/ Ahmed</h6>
+                  <span>Director of UI/UK</span>
+                </div>
+              </div>
+              <img src="./images/team_3.jpg" class="img-fluid" />
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- end thanks for -->
 
     <!-- start news -->
     <section class="news py-5">
-        <h2 class="main-title text-center mb-5">World News</h2>
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-12 col-md-6">
-                    <div class="wrapper-card d-flex justify-content-between">
-                        <div class="card-info">
-                            <h2>Podcast Title</h2>
-                            <span>
-                                <i class="fa-solid fa-calendar-days"></i>
-                                Mon, May 25th 2023
-                            </span>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi aspernatur iure consequatur fugit rerum eaque explicabo, iusto accusantium, quia, provident quo a dolore numquam reiciendis cumque facilis. Incidunt, perspiciatis asperiores?</p>
-                            <div class="control">
-                                <div class="control-box">
-                                    <i class="fa-solid fa-bookmark"></i>
-                                    Podcast
-                                </div>
-                                <div class="control-box">
-                                    <i class="fa-solid fa-clock"></i>
-                                    55 Mins
-                                </div>
-                                <div class="control-box">
-                                    <i class="fa-solid fa-play"></i>
-                                    Play Episode
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-img">
-                            <img src="imgs/package-1.jpg">
-                        </div>
-                    </div>
+      <h2 class="main-title text-center mb-5">World News</h2>
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-12 col-md-6">
+            <div class="wrapper-card d-flex justify-content-between">
+              <div class="card-info">
+                <h2>Podcast Title</h2>
+                <span>
+                  <i class="fa-solid fa-calendar-days"></i>
+                  Mon, May 25th 2023
+                </span>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Sequi aspernatur iure consequatur fugit rerum eaque explicabo,
+                  iusto accusantium, quia, provident quo a dolore numquam
+                  reiciendis cumque facilis. Incidunt, perspiciatis asperiores?
+                </p>
+                <div class="control">
+                  <div class="control-box">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Podcast
+                  </div>
+                  <div class="control-box">
+                    <i class="fa-solid fa-clock"></i>
+                    55 Mins
+                  </div>
+                  <div class="control-box">
+                    <i class="fa-solid fa-play"></i>
+                    Play Episode
+                  </div>
                 </div>
+              </div>
 
-                <div class="col-lg-12 col-md-6">
-                    <div class="wrapper-card d-flex justify-content-between">
-                        <div class="card-img special">
-                            <img src="imgs/package-1.jpg">
-                        </div>
-                        <div class="card-info">
-                            <h2>Podcast Title</h2>
-                            <span>
-                                <i class="fa-solid fa-calendar-days"></i>
-                                Mon, May 25th 2023
-                            </span>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi aspernatur iure consequatur fugit rerum eaque explicabo, iusto accusantium, quia, provident quo a dolore numquam reiciendis cumque facilis. Incidunt, perspiciatis asperiores?</p>
-                            <div class="control">
-                                <div class="control-box">
-                                    <i class="fa-solid fa-bookmark"></i>
-                                    Podcast
-                                </div>
-                                <div class="control-box">
-                                    <i class="fa-solid fa-clock"></i>
-                                    55 Mins
-                                </div>
-                                <div class="control-box">
-                                    <i class="fa-solid fa-play"></i>
-                                    Play Episode
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 col-md-6">
-                    <div class="wrapper-card d-flex justify-content-between">
-                        <div class="card-info">
-                            <h2>Podcast Title</h2>
-                            <span>
-                                <i class="fa-solid fa-calendar-days"></i>
-                                Mon, May 25th 2023
-                            </span>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi aspernatur iure consequatur fugit rerum eaque explicabo, iusto accusantium, quia, provident quo a dolore numquam reiciendis cumque facilis. Incidunt, perspiciatis asperiores?</p>
-                            <div class="control">
-                                <div class="control-box">
-                                    <i class="fa-solid fa-bookmark"></i>
-                                    Podcast
-                                </div>
-                                <div class="control-box">
-                                    <i class="fa-solid fa-clock"></i>
-                                    55 Mins
-                                </div>
-                                <div class="control-box">
-                                    <i class="fa-solid fa-play"></i>
-                                    Play Episode
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-img">
-                            <img src="imgs/package-1.jpg">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 col-md-6">
-                    <div class="wrapper-card d-flex justify-content-between">
-                        <div class="card-img special">
-                            <img src="imgs/package-1.jpg">
-                        </div>
-                        <div class="card-info">
-                            <h2>Podcast Title</h2>
-                            <span>
-                                <i class="fa-solid fa-calendar-days"></i>
-                                Mon, May 25th 2023
-                            </span>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi aspernatur iure consequatur fugit rerum eaque explicabo, iusto accusantium, quia, provident quo a dolore numquam reiciendis cumque facilis. Incidunt, perspiciatis asperiores?</p>
-                            <div class="control">
-                                <div class="control-box">
-                                    <i class="fa-solid fa-bookmark"></i>
-                                    Podcast
-                                </div>
-                                <div class="control-box">
-                                    <i class="fa-solid fa-clock"></i>
-                                    55 Mins
-                                </div>
-                                <div class="control-box">
-                                    <i class="fa-solid fa-play"></i>
-                                    Play Episode
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <div class="card-img">
+                <img src="./images/package-1.jpg" />
+              </div>
             </div>
+          </div>
 
+          <div class="col-lg-12 col-md-6">
+            <div class="wrapper-card d-flex justify-content-between">
+              <div class="card-img special">
+                <img src="./images/package-1.jpg" />
+              </div>
+              <div class="card-info">
+                <h2>Podcast Title</h2>
+                <span>
+                  <i class="fa-solid fa-calendar-days"></i>
+                  Mon, May 25th 2023
+                </span>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Sequi aspernatur iure consequatur fugit rerum eaque explicabo,
+                  iusto accusantium, quia, provident quo a dolore numquam
+                  reiciendis cumque facilis. Incidunt, perspiciatis asperiores?
+                </p>
+                <div class="control">
+                  <div class="control-box">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Podcast
+                  </div>
+                  <div class="control-box">
+                    <i class="fa-solid fa-clock"></i>
+                    55 Mins
+                  </div>
+                  <div class="control-box">
+                    <i class="fa-solid fa-play"></i>
+                    Play Episode
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 col-md-6">
+            <div class="wrapper-card d-flex justify-content-between">
+              <div class="card-info">
+                <h2>Podcast Title</h2>
+                <span>
+                  <i class="fa-solid fa-calendar-days"></i>
+                  Mon, May 25th 2023
+                </span>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Sequi aspernatur iure consequatur fugit rerum eaque explicabo,
+                  iusto accusantium, quia, provident quo a dolore numquam
+                  reiciendis cumque facilis. Incidunt, perspiciatis asperiores?
+                </p>
+                <div class="control">
+                  <div class="control-box">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Podcast
+                  </div>
+                  <div class="control-box">
+                    <i class="fa-solid fa-clock"></i>
+                    55 Mins
+                  </div>
+                  <div class="control-box">
+                    <i class="fa-solid fa-play"></i>
+                    Play Episode
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-img">
+                <img src="./images/package-1.jpg" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 col-md-6">
+            <div class="wrapper-card d-flex justify-content-between">
+              <div class="card-img special">
+                <img src="./images/package-1.jpg" />
+              </div>
+              <div class="card-info">
+                <h2>Podcast Title</h2>
+                <span>
+                  <i class="fa-solid fa-calendar-days"></i>
+                  Mon, May 25th 2023
+                </span>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Sequi aspernatur iure consequatur fugit rerum eaque explicabo,
+                  iusto accusantium, quia, provident quo a dolore numquam
+                  reiciendis cumque facilis. Incidunt, perspiciatis asperiores?
+                </p>
+                <div class="control">
+                  <div class="control-box">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Podcast
+                  </div>
+                  <div class="control-box">
+                    <i class="fa-solid fa-clock"></i>
+                    55 Mins
+                  </div>
+                  <div class="control-box">
+                    <i class="fa-solid fa-play"></i>
+                    Play Episode
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- end news -->
 
     <!-- start join -->
     <section class="join py-5">
-        <h2 class="main-title text-center mb-5">Join Us</h2>
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="social-box">
-                        <h4>Subscribe Now</h4>
-                        <img src="imgs/youtube.png">
-                        <a class="d-block" href="#">Go To Link</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="social-box">
-                        <h4>Follow</h4>
-                        <img src="imgs/facebook.png">
-                        <a class="d-block" href="#">Go To Link</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="social-box">
-                        <h4>Like The Page</h4>
-                        <img src="imgs/linkedin.png">
-                        <a class="d-block" href="#">Go To Link</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="social-box">
-                        <h4>Watch Reels</h4>
-                        <img src="imgs/insta.png">
-                        <a class="d-block" href="#">Go To Link</a>
-                    </div>
-                </div>
+      <h2 class="main-title text-center mb-5">Join Us</h2>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="social-box">
+              <h4>Subscribe Now</h4>
+              <img src="./images/youtube.png" />
+              <a class="d-block" href="#">Go To Link</a>
             </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="social-box">
+              <h4>Follow</h4>
+              <img src="./images/facebook.png" />
+              <a class="d-block" href="#">Go To Link</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="social-box">
+              <h4>Like The Page</h4>
+              <img src="./images/linkedin.png" />
+              <a class="d-block" href="#">Go To Link</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="social-box">
+              <h4>Watch Reels</h4>
+              <img src="./images/insta.png" />
+              <a class="d-block" href="#">Go To Link</a>
+            </div>
+          </div>
         </div>
-
+      </div>
     </section>
     <!-- end join -->
 
     <!-- start footer -->
     <footer>
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <img src="imgs/book-img.png" class="w-50">
-                    <p>Tel: 01092635055</p>
-                    <p>Address: Egypt</p>
-                    <p>Fax: 000.00.000</p>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h2>Contact Us</h2>
-                    <p>Visit us</p>
-                    <p>Take a look</p>
-                    <p>Your health is your important</p>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h2>Good Comapny</h2>
-                    <p>Services of all</p>
-                    <p>provide best services</p>
-                    <p>You will be better than before</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <img src="./images/book-img.png" class="w-50" />
+            <p>Tel: 01092635055</p>
+            <p>Address: Egypt</p>
+            <p>Fax: 000.00.000</p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h2>Contact Us</h2>
+            <p>Visit us</p>
+            <p>Take a look</p>
+            <p>Your health is your important</p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h2>Good Comapny</h2>
+            <p>Services of all</p>
+            <p>provide best services</p>
+            <p>You will be better than before</p>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- end footer -->
 
-
-
-
-
-    <script src="js/all.min.js"></script>
-    <script src="js/bootstrap.bundle.js.map"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="./js/bootstrap.bundle.js"></script>
+  </body>
 </html>

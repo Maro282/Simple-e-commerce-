@@ -9,9 +9,75 @@
     <!-- Bootstrap -->
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
     <!-- My style -->
+    <link href="./css/navbar.css" rel="stylesheet" />
     <link href="./css/cartPage.css" rel="stylesheet" />
   </head>
   <body class="cart-page-body">
+    <nav class="navbar navbar-expand-lg shadow-sm custom-navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="navbar.html">
+          <img src="./images/tailor.png" alt="Logo" width="80" />
+        </a>
+
+        <!-- Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Icons -->
+        <div
+          class="d-flex align-items-center gap-3 order-lg-2 ms-2"
+          id="userSection"
+        >
+          <!-- Search -->
+          <div class="position-relative search-container">
+            <i
+              class="fas fa-search fa-lg text-dark search-icon"
+              style="cursor: pointer"
+            ></i>
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control form-control-sm search-input"
+              placeholder="Type to search..."
+            />
+          </div>
+
+          <!-- Login / Logout -->
+          <a href="login.html" class="text-dark fw-semibold" id="loginBtn"
+            >Login</a
+          >
+          <a href="#" class="text-dark fw-semibold d-none" id="logoutBtn"
+            >Logout</a
+          >
+
+          <!-- Cart -->
+          <a href="#" class="text-dark position-relative">
+            <i class="fas fa-shopping-cart fa-lg"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              id="cartCount"
+              >0</span
+            >
+          </a>
+        </div>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
+          <ul class="navbar-nav mx-auto" id="navLinks"></ul>
+        </div>
+      </div>
+    </nav>
+
     <div class="container d-flex flex-column row-gap-3 my-5">
       <header>
         <h1 class="cart-header text-center p-3">
@@ -81,5 +147,6 @@
     </div>
     <script src="./js/bootstrap.bundle.js"></script>
     <script type="module" src="./js/cartPage.js"></script>
+    <script src="./js/navbar.js"></script>
   </body>
 </html>
