@@ -75,6 +75,41 @@
   font-size: 25px;
 }
 
+#clear-cart {
+  background-color: red;
+  color: white !important;
+  border: 1px solid red;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#clear-cart:hover {
+  background-color: white;
+  color: red !important;
+  border: 1px solid red;
+}
+
+.remove-btn {
+  background-color: white;
+  border: 1px solid red;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: red !important;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: red;
+  color: white !important;
+}
+
 .checkout-area .btn-success {
   font-size: 18px;
   background-color: #00b894;
@@ -86,6 +121,9 @@
   background-color: #00a382;
 }
 
+.out-of-stock {
+  font-size: 12px;
+}
 @media (max-width: 768px) {
   .item-detail-haeder,
   .item {

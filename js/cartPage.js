@@ -1,4 +1,5 @@
 import { getDataFromLocalStorage } from "./storage.js";
+import { cartCounter } from "./navbar.js";
 
 // ==================== Dom tags =============================
 const clearCartBtn = document.getElementById("clear-cart");
@@ -9,6 +10,8 @@ function displayCartData() {
   const cartEmpty = document.getElementById("cartEmpty");
 
   const cart = getDataFromLocalStorage();
+  cartCounter.textContent = cart.length;
+
   if (cart.length == 0) {
     cartEmpty.classList.add("d-block");
     cartEmpty.classList.remove("d-none");
@@ -26,7 +29,7 @@ function displayCartData() {
                   <div class="item-name-pic d-flex align-items-center column-gap-2">
                     <div class="item-pic-box">
                       <img
-                        src="./images/product.png"
+                        src="${item.imageUrl}"
                         class="w-100 h-100 object-fit-cover"
                       />
                     </div>
@@ -54,7 +57,7 @@ function displayCartData() {
         </div>
         ${
           item.quantity == item.inStock
-            ? '<span class="text-danger">There is no more in stock</span>'
+            ? '<span class="text-danger out-of-stock">There is no more in stock</span>'
             : ""
         }
       </div>
@@ -64,7 +67,7 @@ function displayCartData() {
                   </div>
 
                   <div class="item-action text-center">
-                    <button class="btn btn-danger text-white remove-btn" data-id="${
+                    <button class=" text-white remove-btn" data-id="${
                       item.id
                     }" >Remove</button>
                   </div>
@@ -125,7 +128,7 @@ function removeFromCart(productId) {
 }
 
 // Updating quantity
-function updateQuantity(productId, newQuantity) {
+export function updateQuantity(productId, newQuantity) {
   if (newQuantity < 1) {
     removeFromCart(productId);
     return;
@@ -174,10 +177,9 @@ window.addEventListener("DOMContentLoaded", () => {
   displayCartData();
   displayClearCartBtn();
   updateSummary();
-});
-
-clearCartBtn.addEventListener("click", () => {
-  clearCart();
+  clearCartBtn.addEventListener("click", () => {
+    clearCart();
+  });
 });
 
 function displayClearCartBtn() {

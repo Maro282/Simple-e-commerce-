@@ -1,3 +1,10 @@
+// ==================Marwan==========================
+// exporting cart icon counter to cartpage.js to
+//  handle it's textContent when adding product
+
+export const cartCounter = document.getElementById("cartCount");
+// ==================End Marwan =====================
+
 document.addEventListener("DOMContentLoaded", () => {
   let navLinks = document.getElementById("navLinks");
   let loginBtn = document.getElementById("loginBtn");
@@ -6,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentPage = window.location.pathname.split("/").pop();
   let loggedIn = localStorage.getItem("loggedIn");
 
-  // Navbar Links 
+  // Navbar Links
   if (navLinks) {
     if (currentPage === "login.html" || currentPage === "register.html") {
       navLinks.innerHTML = "";
@@ -25,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Login / Logout buttons 
+  // Login / Logout buttons
   if (loggedIn === "true") {
     if (loginBtn) loginBtn.classList.add("d-none");
     if (logoutBtn) {
@@ -42,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (logoutBtn) logoutBtn.classList.add("d-none");
   }
 
-  // Toggle Password 
+  // Toggle Password
   document.querySelectorAll(".toggle-password").forEach((icon) => {
     icon.addEventListener("click", () => {
       let targetId = icon.getAttribute("data-target");
@@ -61,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Login 
+  // Login
   let loginForm = document.getElementById("loginForm");
   if (loginForm) {
     loginForm.addEventListener("submit", (e) => {
@@ -70,7 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
       let passwordInput = document.getElementById("password").value;
 
       let storedUser = JSON.parse(localStorage.getItem("userData"));
-      if (storedUser && emailInput === storedUser.email && passwordInput === storedUser.password) {
+      if (
+        storedUser &&
+        emailInput === storedUser.email &&
+        passwordInput === storedUser.password
+      ) {
         localStorage.setItem("loggedIn", "true");
         alert("Login successful!");
         window.location.href = "index.html";
@@ -98,13 +109,17 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      let userData = { username: newUsername, email: newEmail, password: newPassword };
+      let userData = {
+        username: newUsername,
+        email: newEmail,
+        password: newPassword,
+      };
       localStorage.setItem("userData", JSON.stringify(userData));
       alert("Registration successful! Please login.");
       window.location.href = "login.html";
     });
   }
-  
+
   // Search Toggle
   let searchIcon = document.querySelector(".search-icon");
   let searchContainer = document.querySelector(".search-container");
@@ -115,6 +130,5 @@ document.addEventListener("DOMContentLoaded", () => {
       let input = searchContainer.querySelector(".search-input");
       if (input) input.focus();
     });
-  } 
-
+  }
 });
