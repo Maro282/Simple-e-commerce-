@@ -1,6 +1,15 @@
+<<<<<<< HEAD:navbar.js
+// ================== Export ==================
+export const cartCounter = document.getElementById("cartCount");
+// ============================================
+=======
+// ==================Marwan==========================
+// exporting cart icon counter to cartpage.js to
+//  handle it's textContent when adding product
 
 export const cartCounter = document.getElementById("cartCount");
-
+// ==================End Marwan =====================
+>>>>>>> 773d8f0c519e065481577e2190a35f30355177c6:js/navbar.js
 
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.getElementById("navLinks");
@@ -12,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentPage = window.location.pathname.split("/").pop();
   const loggedIn = localStorage.getItem("loggedIn");
 
-
+  // Navbar Links
   if (navLinks) {
     if (currentPage === "login.html" || currentPage === "register.html") {
       navLinks.innerHTML = "";
@@ -31,7 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-
+<<<<<<< HEAD:navbar.js
+  // Login / Logout buttons + Show/Hide search & cart
+=======
+  // Login / Logout buttons
+>>>>>>> 773d8f0c519e065481577e2190a35f30355177c6:js/navbar.js
   if (loggedIn === "true") {
     if (loginBtn) loginBtn.classList.add("d-none");
     if (logoutBtn) logoutBtn.classList.remove("d-none");
@@ -53,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cartLink) cartLink.classList.add("d-none");
   }
 
-
+  // Toggle Password
   document.querySelectorAll(".toggle-password").forEach((icon) => {
     icon.addEventListener("click", () => {
       const targetId = icon.getAttribute("data-target");
@@ -72,16 +85,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  
+  // Login
+<<<<<<< HEAD:navbar.js
   const loginForm = document.getElementById("loginForm");
+=======
+  let loginForm = document.getElementById("loginForm");
+>>>>>>> 773d8f0c519e065481577e2190a35f30355177c6:js/navbar.js
   if (loginForm) {
     loginForm.addEventListener("submit", (e) => {
       e.preventDefault();
       const emailInput = document.getElementById("username").value.trim();
       const passwordInput = document.getElementById("password").value;
 
+<<<<<<< HEAD:navbar.js
       const storedUser = JSON.parse(localStorage.getItem("userData"));
       if (storedUser && emailInput === storedUser.email && passwordInput === storedUser.password) {
+=======
+      let storedUser = JSON.parse(localStorage.getItem("userData"));
+      if (
+        storedUser &&
+        emailInput === storedUser.email &&
+        passwordInput === storedUser.password
+      ) {
+>>>>>>> 773d8f0c519e065481577e2190a35f30355177c6:js/navbar.js
         localStorage.setItem("loggedIn", "true");
         alert("Login successful!");
         window.location.href = "index.html";
@@ -91,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  
+  // Register
   const registerForm = document.getElementById("registerForm");
   if (registerForm) {
     registerForm.addEventListener("submit", (e) => {
@@ -110,14 +136,29 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
+<<<<<<< HEAD:navbar.js
       const userData = { username: newUsername, email: newEmail, password: newPassword };
+=======
+      let userData = {
+        username: newUsername,
+        email: newEmail,
+        password: newPassword,
+      };
+>>>>>>> 773d8f0c519e065481577e2190a35f30355177c6:js/navbar.js
       localStorage.setItem("userData", JSON.stringify(userData));
       alert("Registration successful! Please login.");
       window.location.href = "login.html";
     });
   }
+<<<<<<< HEAD:navbar.js
+=======
 
+  // Search Toggle
+  let searchIcon = document.querySelector(".search-icon");
+  let searchContainer = document.querySelector(".search-container");
+>>>>>>> 773d8f0c519e065481577e2190a35f30355177c6:js/navbar.js
 
+  // Search Toggle
   const searchIcon = document.querySelector(".search-icon");
   if (searchIcon && searchContainer) {
     searchIcon.addEventListener("click", () => {
@@ -126,4 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (input) input.focus();
     });
   }
+<<<<<<< HEAD:navbar.js
 });
+=======
+});
+>>>>>>> 773d8f0c519e065481577e2190a35f30355177c6:js/navbar.js

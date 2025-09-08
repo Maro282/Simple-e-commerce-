@@ -53,7 +53,7 @@ html, body {
   width: 100%;
 }
 
-
+/* Search */
 .search-container {
   position: relative;
   display: inline-block;
@@ -73,7 +73,7 @@ html, body {
   opacity: 1;
 }
 
-
+/* Form */
 .form-container {
   display: flex;
   justify-content: center;
